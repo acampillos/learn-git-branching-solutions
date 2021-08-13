@@ -1,0 +1,33 @@
+4. A MIXED BAG
+
+4.1. Grabbing Just 1 Commit
+
+git checkout main
+git cherry-pick C4
+
+4.2. Juggling Commits
+
+git rebase -i caption~2
+git commit --amend
+git rebase -i caption~2
+git branch -f main caption
+
+Order as C3, C2
+Order as C2'', C3'
+
+4.3. Juggling Commits #2
+
+git checkout master
+git cherry-pick C2
+git commit --amend
+git cherry-pick C3
+
+4.4. Git Tags
+
+git tag v0 C1
+git tag v1 C2
+git checkout C2
+
+4.5. Git Describe
+
+git commit

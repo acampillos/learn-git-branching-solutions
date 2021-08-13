@@ -1,0 +1,20 @@
+5. ADVANCED TOPICS
+
+5.1. Rebasing over 9000 times
+
+git rebase main bugFix
+git rebase bugFix side
+git rebase side another
+git rebase another main
+
+5.2. Multiple parents
+
+git branch bugWork master~^2~
+
+5.3. Branch Spaghetti
+
+git checkout one
+git cherry-pick C4 C3 C2
+git checkout two
+git cherry-pick C5 C4 C3 C2
+git branch -f three C2
