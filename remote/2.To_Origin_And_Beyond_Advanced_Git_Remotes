@@ -1,0 +1,54 @@
+2. TO ORIGIN AND BEYOND -- ADVANCED GIT REMOTES!
+
+2.1. Push Main!
+
+# One step less than 
+git rebase side1 side2
+git rebase side2 side3
+git rebase side3 main
+git pull --rebase
+git push
+
+
+2.2. Merging with remotes
+
+git checkout main
+git pull
+git merge side1
+git merge side2
+git merge side3
+git push
+
+2.3. Remote Tracking
+
+git checkout -b side o/main
+git commit
+git pull --rebase
+git push
+
+2.4. Git push arguments
+
+git push origin main
+git push origin foo
+
+2.5. Git push arguments -- Expanded!
+
+git push origin main~1:foo
+git push origin foo:main
+
+2.6. Fetch arguments
+
+git fetch origin main~1:foo
+git fetch origin foo:main
+git checkout foo
+git merge main
+
+2.7. Source of nothing
+
+git push origin :foo
+git fetch origin :bar
+
+2.8. Pull arguments
+
+git pull origin bar:foo
+git pull origin main:side
